@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "author": "wb",
   "scripts": {
+    "start": "vuepress dev . --host \"localhost\"",
     "dev": "vuepress dev . --host \"localhost\"",
     "build": "vuepress build .",
     "deploy": "bash deploy.sh"

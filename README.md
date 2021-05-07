@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: 王小二的博客
-tagline: 偶尔写点儿东西
+heroText: 听雨の小屋
+tagline: 人生如白纸，何不记录生活的五彩墨迹
 bgImageStyle: {
   height: '450px'
 }
