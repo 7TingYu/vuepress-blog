@@ -9,10 +9,13 @@ isShowTitleInHome: false
 actionText: Guide
 actionLink: /views/other/guide
 features:
-- title: Yesterday
-  details: 开发一款看着开心、写着顺手的 vuepress 博客主题
-- title: Today
-  details: 希望帮助更多的人花更多的时间在内容创作上，而不是博客搭建上
-- title: Tomorrow
-  details: 希望更多的爱好者能够参与进来，帮助这个主题更好的成长
+- title: 小屋构建
+  details: 基于 VuePress 搭建的个人网站，享受 Vue + webpack 的开发体验。
+- title: 小屋概述
+  details: 整理 Vue, React, Webpack, Node 及 小程序 学习开发等过程所记录的笔记。
+- title: 小屋灯塔
+  details: 学习是件令人开心的事情，不记录一下怎么行。----听雨
 ---
+
+<!-- :smile: [听雨个人网站](https://yu7.gitee.io/) -->
+

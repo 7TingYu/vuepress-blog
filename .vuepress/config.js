@@ -8,10 +8,10 @@ module.exports = {
   head: [
     [
       "link",
-      // {
-      //   rel: "icon",
-      //   href: "/logo.jpg"
-      // }
+      {
+        rel: "none",
+        href: "/logo.jpg"
+      }
     ],
     [
       "meta",
@@ -78,7 +78,7 @@ module.exports = {
     searchMaxSuggestions: 10,
     lastUpdated: "Last Updated",
     author: "听雨",
-    authorAvatar: "/avatar.jpg",
+    authorAvatar: "/avatar.png",
     record: "xxxx",
     startYear: "2020"
   },
