@@ -3,7 +3,7 @@ const sidebar = require('./siderbar.js');
 module.exports = {
   title: '听雨の小屋',
   description: "人生如白纸，何不记录生活的五彩墨迹",
-  dest: "public",
+  dest: "dist",
   base: "/",
   head: [
     [
@@ -79,7 +79,6 @@ module.exports = {
     lastUpdated: "Last Updated",
     author: "听雨",
     authorAvatar: "/avatar.png",
-    record: "xxxx",
     startYear: "2020"
   },
   markdown: {
