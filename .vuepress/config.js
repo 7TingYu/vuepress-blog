@@ -7,13 +7,6 @@ module.exports = {
   base: "/",
   head: [
     [
-      "link",
-      {
-        rel: "none",
-        href: "/logo.jpg"
-      }
-    ],
-    [
       "meta",
       {
         name: "viewport",
@@ -73,12 +66,12 @@ module.exports = {
         link: "https://vuepress-theme-reco.recoluan.com"
       }
     ],
-    logo: "/logo.png",
+    logo: "/images/config/logo.png",
     search: true,
     searchMaxSuggestions: 10,
     lastUpdated: "Last Updated",
     author: "听雨",
-    authorAvatar: "/avatar.png",
+    authorAvatar: "/images/config/avatar.png",
     startYear: "2020"
   },
   markdown: {

@@ -1,21 +1,26 @@
----
-home: true
-heroText: 听雨の小屋
-tagline: 人生如白纸，何不记录生活的五彩墨迹
-bgImageStyle: {
-  height: '450px'
-}
-isShowTitleInHome: false
-actionText: Guide
-actionLink: /views/other/guide
-features:
-- title: 小屋构建
-  details: 基于 VuePress 搭建的个人网站，享受 Vue + webpack 的开发体验。
-- title: 小屋概述
-  details: 整理 Vue, React, Webpack, Node 及 小程序 学习开发等过程所记录的笔记。
-- title: 小屋灯塔
-  details: 学习是件令人开心的事情，不记录一下怎么行。----听雨
----
+# :bookmark: VuePress 搭建个人静态博客网站
 
-<!-- :smile: [听雨个人网站](https://yu7.gitee.io/) -->
+## :car: 环境
 
+- VuePress
+- Node 8+
+- Yarn
+基于VuePress搭建的个人静态网站，享受 Vue + webpack 的开发体验。
+
+## 简述
+
+记录在不断地学习过程中所记录的笔记
+
+## :star: Find Me
+
+| :car:掘金                  | [｢听雨づ生](https://juejin.cn/user/3122268754411863) |
+| -------------------------- | ----------------------------------------------------------- |
+| :beer: ​Github              | [GitHub Home](https://github.com/7tingyu)                |
+| :bird:码云                 | [Gitee码云](https://gitee.com/yu7)                   |
+
+
+:smile: [听雨的个人网站](https://yu7.gitee.io/)
+## 说明
+
+> VuePress 搭建个人博客源码仓库
+> 需要模板请移步 [vuepress博客模板](https://gitee.com/yu7/blog-templete/)
