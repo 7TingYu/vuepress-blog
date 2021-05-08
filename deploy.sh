@@ -22,8 +22,8 @@ git remote -v
 # git push -f git@github.com:7TingYu/7TingYu.git master:master
 # git push -f git@gitee.com:yu7/yu7.git master:master
 
-git push github master:master
-git push gitee master:master
+git push -f github master:master
+git push -f gitee master:master
 
 cd ..
 

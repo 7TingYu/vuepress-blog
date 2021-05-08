@@ -20,8 +20,8 @@ module.exports = {
     mode: 'light',
     subSidebar: 'auto',
     valineConfig: {
-      appId: 'h6i7vXvVEK37fFFwb1DtMJ6W-gzGzoHsz',
-      appKey: 'cYI3hypnGAI00CPuzhNfeY8Q',
+      appId: 'DfvwhrxlThMXJccy5zFQcUTv-gzGzoHsz',
+      appKey: 'etS7iob4efrfwWmTsNfxrID7',
     },
     nav: [
       {
@@ -66,6 +66,7 @@ module.exports = {
         link: "https://vuepress-theme-reco.recoluan.com"
       }
     ],
+    codeTheme: 'solarizedlight',
     logo: "/images/config/logo.png",
     search: true,
     searchMaxSuggestions: 10,
