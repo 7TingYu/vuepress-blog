@@ -1,11 +1,20 @@
-const { createSideBarConfig } = require('./util')
-const VUE_BASE_PATH = '/blogs/vue-base'
-const VUE_ADVANCE_PATH = '/blogs/vue-advance'
-const C_BASE_PATH = '/blogs/c-base'
+const { createSideBarConfig, createSideBarsConfig } = require('./util')
 
 module.exports = {
-  [VUE_BASE_PATH]: [createSideBarConfig('vue 基础学识', VUE_BASE_PATH), createSideBarConfig('vue 进阶学识', VUE_ADVANCE_PATH)],
-  [VUE_ADVANCE_PATH]: [createSideBarConfig('vue 基础学识', VUE_BASE_PATH), createSideBarConfig('vue 进阶学识', VUE_ADVANCE_PATH)],
-  [C_BASE_PATH]: [createSideBarConfig('c语言 基础学识', C_BASE_PATH)],
-  // [VUE_ADVANCE_PATH]: [createSideBarConfig('vue 进阶学识', VUE_ADVANCE_PATH)],
+  ...createSideBarsConfig([
+    { title: 'vue 基础学识', prefixPath: '/blogs/vue-base' },
+    { title: 'vue 进阶学识', prefixPath: '/blogs/vue-advance' }
+  ]),
+  ...createSideBarsConfig([
+    { title: 'c语言 先导课', prefixPath: '/blogs/c-base' },
+  ]),
+  ...createSideBarsConfig([
+    { title: '英语 先导课', prefixPath: '/blogs/English-base' },
+  ]),
+  ...createSideBarsConfig([
+    { title: '数学 先导课', prefixPath: '/blogs/Math-base' },
+  ]),
+  ...createSideBarsConfig([
+    { title: '小识书屋', prefixPath: '/blogs/tips' },
+  ]),
 }
