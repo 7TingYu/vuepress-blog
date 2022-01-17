@@ -15,15 +15,15 @@ git commit -m 'deploy'
 # git remote -v
 
 # 如果发布到 https://<USERNAME>.github.io  填写你刚刚创建的仓库地址
-git remote add github git@github.com:7TingYu/7tingyu.github.io.git
 git remote add gitee git@gitee.com:yu7/yu7.git
+git remote add github git@github.com:7TingYu/7tingyu.github.io.git
 git remote -v
 
 # git push -f git@github.com:7TingYu/7TingYu.git master:master
 # git push -f git@gitee.com:yu7/yu7.git master:master
 
-git push -f github master:master
 git push -f gitee master:master
+git push -f github master:master
 
 cd ..
 
