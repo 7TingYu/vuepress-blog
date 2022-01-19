@@ -7,25 +7,37 @@ categories:
  - interview
 ---
 
-## css
+# css
 
-#### 防止高度坍塌：4种
+## 防止高度坍塌：4种
 
-- 父元素 overflow: hidden;
-- 结尾子元素 clear: both;
+父元素不写高度时，子元素写了浮动后，父元素会发生高度塌陷（造成父元素高度为 0）
+
+
+- 给父元素添加声明overflow：hidden
+- 在浮动元素下方添加空div，并给元素声明 clear：both，保险起见，再加height:0。清除个别块元素可能自带的height:16px;
 - 父元素浮动 float: left;
   - 解决: 父元素之后的 平级元素增加 clear: both;
-- 完美解决: 父元素末尾伪元素设置 clear: both;
+- 完美解决: 
+  ```css
+  .parents::after{
+		content: "";
+		display: block;
+        clear: both;
+ 		height: 0; /*为了清楚个别块元素自带的16px高度*/
+	}
+  ```
 
 
 
-### BFC(block formatting context)
-
-> - 独立渲染区域
-> - 外部不影响内部
-> - 内部不影响外部
+## BFC(block formatting context)
 
 块级格式化上下文
+
+- 独立渲染区域
+- 外部不影响内部
+- 内部不影响外部
+
 
 **4种情况会形成BFC渲染区域**
 
@@ -35,49 +47,80 @@ categories:
 - overflow的值不是visible
 
 
-
 **解决问题**
 
 - 高度坍塌
-- 垂直方向上高度合并
-- 垂直方向上的margin溢出
-- 左定宽,右自适应
-  - 左浮动,右overflow:hidden;
+- 避免垂直方向margin合并
+- 避免垂直方向margin溢出
+- 自适应两栏布局
+  - 左浮动, 右overflow:hidden(生成bfc);
 
 
-
-### IFC(inline formatting context)
-
-> display: inline | inline-block | inline-flex
-
-
-
-### 垂直方向上的margin溢出
+### 补充点：垂直方向上的margin溢出
 
 - 父元素overflow:hidden;
-- 父元素第一个子元素添加空<table>
+- 父元素第一个子元素添加空\<table>
 - 父元素 padding 代替子元素 margin
 - 父元素透明上边框
 - 父元素::before{content:"";display:table}
 
 
+## IFC(inline formatting context)
 
-### flex
-
-- flex-direction 主轴及其排列方向
-- flex-wrap 是否换行
-- justify-content 主轴上的对齐方式
-- align-items 交叉轴的统一对齐
+> display: inline | inline-block | inline-flex
 
 
 
-### 居中的方法总结
+## flex
+
+网页内容要可以随显示设备的大小而动态调整布局
+
+概念：
+
+- 容器 - 父元素
+- 项目 - 多个子元素
+- 主轴 - 子元素排列方向上的轴
+- 交叉轴 - 与主轴方向垂直的轴
+
+父元素上设置的属性
+
+- display:flex - 父元素变成弹性布局渲染区域
+- flex-direction - 指定容器主轴的排列方向
+- flex-wrap - 当主轴排列不下所有元素时，是否自动换行
+- flex-flow - flex-direction + flow-wrap的简写形式
+- justify-content - 定义项目在主轴上的对齐方式
+- align-items - 定义所有子元素在交叉轴上的对齐方式
+
+每个子元素项目可单独设置的属性
+
+- order - 定义项目在主轴上的排列顺序 - 值越小，越靠近起点；值越大，越靠近结尾，默认值都是0
+- flex-grow - 定义项目的放大比例 - 如果容器有足够的空间，项目可以放大
+- flex-shrink - 定义项目的缩小比例 - 如果容器空间不足时，项目可以缩小。
+- flex-basis - 定义了在分配多余空间之前，项目占据的主轴空间
+- flex - flex-grow + flex-shrink + flex-basis
+- align-self - 单独定义某一个项目在交叉轴上的对齐方式 - 其取值和align-items完全一样。只是多了一个auto值，表示继承父元素的align-items效果。
+
+
+### 补充：flex 简写的含义
+
+- flex: 1 - 对应的是1 1 0; - 不管内容多少，一般都是平分空间，空间大小都一致
+- flex: auto - 对应的是1 1 auto; - 是根据内容的大小来分，不是均分的
+- flex: 0 - 对应的是0 1 0; - 不可扩大，可缩小
+- flex: none - 对应的是0 0 auto; - 不可扩大，不可缩小
+
+
+### 补充：flex 练习网站
+
+[FLEXBOX FROGGY](https://flexboxfroggy.com/)（弹性盒小青蛙）是一个帮助你快速学习前端 Flex 布局的小游戏。
+
+
+## 居中的方法总结
 
 > 父元素必须是块级格子容器
 >
 > 父元素宽度必须已经被设定好
 
-#### 水平居中
+### 水平居中
 
 块级居中
 
@@ -91,7 +134,7 @@ categories:
 
 - text-align: center;
 
-#### 垂直居中
+### 垂直居中
 
 块级居中
 
@@ -107,28 +150,175 @@ categories:
   - 父元素 display: inline | inline-block | table-cell;
   - vertical-align: middle;
 
-### 移动端适配 -- 5种
 
-> - 设备的物理像素 pt --- 屏幕宽/分辨率
-> - css 像素 px 
->   - 1px ~ 0.76pt
->   - 手机屏幕 1px ~ 2pt
-> - rem 
-> - em
-> - rpx
->   - 1rpx = 0.5px = 1pt
-> - vw/vh
-> - %
+## 单位相关学识
+
+- pt - 设备物理像素 - 屏幕宽/分辨率，其中每一小份就是1pt
+- px - css像素
+  - pc机大屏幕显示器，1px约等于0.76个物理像素
+  - 手机小屏幕，以iPhone6为标准 - 1px=2pt
+- rem - 以网页根元素\<html>元素上设置的默认字体大小为1rem
+- em - 父元素的字体大小为1em
+- rpx - 小程序专用
+  - 1rpx = 0.5px = 1pt
+- vw/vh - CSS3 特性 vh 和 vw：
+- % - 因为%不总是相对于父元素的宽高或屏幕大小，所以，有坑，开发少用。
+  - 通常认为子元素的百分比完全相对于直接父元素，但是，不总是相对于父元素的对应属性值
+  - 子元素的 top 和 bottom 如果设置百分比，则相对于直接非 static 定位(默认定位)的父元素的高度
+  - 子元素的 left 和 right 如果设置百分比，则相对于直接非 static 定位(默认定位的)父元素的宽度
+  - 子元素的 padding/margin 如果设置百分比，不论是垂直方向或者是水平方向，都相对于直接父亲元素的 padding/margin ，而与父元素的 height 无关。
+
+
+## 移动端适配
 
 ```html
-<meta name="viewport" content="" />
+<meta name=”viewport”content=”width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0”>
+
+<!-- 
+ viewport - 视口 - 显示设备内部，真正实际可用于显示网页的区域大小
+ width - 视口宽 - device-width - 等于物理设备宽
+ user-scalable - 是否允许用户手工缩放网页
+ initial-scale=1.0 - 加载页面时，页面的缩放比例是1，表示不缩放，原网页大小展示
+ maximum-scale=1.0,minimum-scale=1.0 - 允许用户缩放网页的最大缩放比例和最小缩放比例
+ -->
+```
+
+5种响应式布局方式
+
+- flex布局
+- 父相子绝
+- grid布局
+- float布局
+- 使用rem作单位，等比缩放
+
+
+#### 补充 媒体查询
+
+**媒体类型**
+
+- print（打印机）
+- screen（所有屏幕设备的统称：各种电脑屏幕、各种手机屏幕、各种平板屏幕，主要使用的就是这个）
+- all（所有媒体设备，默认值）
+- speech（应用于屏幕阅读器等发声设备） 
+
+
+**style**
+
+在 style 标签中通过 media属性 可以设置样式使用的媒体设备。
+
+
+**link**
+
+在 link 标签中通过 media属性 可以设置样式使用的媒体设备。
+
+**@import**
+
+使用@import 可以引入指定设备的样式规则，文件中引入一个样式文件，在这个文件中再引入其他媒体的样式文件。
+
+```css
+@import url(screen.css) screen;
+```
+
+**@media**
+
+```css
+@media screen {
+    h1 {
+        font-size: 3em;
+        color: blue;
+    }
+}
+@media print {
+    h1 {
+        font-size: 8em;
+        color: red;
+    }
+    h2, hr {
+        display: none;
+    }
+}
+```
+
+**多设备支持（，分隔）**
+
+**设备方向（orientation 属性）**
+
+**查询条件**
+
+```css
+  /* 横屏显示宽度不能超过600px */
+  @media screen and (orientation: landscape) and (max-width: 600px) { }
+
+  /* 横屏显示或宽度不超过600px */
+  @media screen and (orientation: landscape),
+         screen and (max-width: 600px) { }
+
+  /* 既不是横屏，宽度又不小于600时，才使用 */
+  @media not screen and (orientation: landscape) and (max-width:600px) { }
+```
+
+**父容器版心的尺寸划分**
+
+- 超小屏幕（手机，小于 768px）：设置宽度为 100%
+- 小屏幕（平板，大于等于 768px）：设置宽度为 750px
+- 中等屏幕（桌面显示器，大于等于 992px）：宽度设置为 970px
+- 大屏幕（大桌面显示器，大于等于 1200px）：宽度设置为 1170px
+
+**响应式字体**
+
+```css
+/* rem是相对于根元素的，不要忘记重置根元素字体大小： */
+html{font-size:100%;}
+
+/* 完成后，你可以定义响应式字体： */
+@media (min-width:640px){body{font-size:1rem;}}
+@media (min-width:960px){body{font-size:1.2rem;}}
+@media (min-width:1200px){body{font-size:1.5rem;}}
+```
+
+
+## 拓展：缩放
+
+### 如何实现\<12px的字
+
+```css
+display:inline-block; /*scale只能缩放行内块或块元素*/
+-webkit-transform: scale(0.5);  /*定义2D缩放*/
+-webkit-transform-origin:left top; /*定义缩放源点为左上角*/
+```
+
+
+### 0.5px的线如何实现
+
+
+1.css
+
+```css
+.hr.half-px {
+    height: 0.5px;
+}
+```
+
+
+> 不同设备，不同浏览器差异较大 
+
+优化
+
+```css
+.hr.scale-half {
+    height: 1px;
+    transform: scaleY(0.5);
+    transform-origin: 50% 100%; /*为了防止线模糊*/
+}
 ```
 
 
 
-- flex
-- 父相子绝
-- grid
-- float
-- rem
+2.图片
+
+利用 background-image 属性，将图片作为边框加载
+
+
+3.利用transform
+
 
