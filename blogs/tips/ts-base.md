@@ -946,6 +946,60 @@ type x = Person["name"]; // x is string
 ```
 
 
+### 映射类型 in
+
+```ts
+interface Person {
+  name: string;
+  age: number;
+  gender: "male" | "female";
+}
+//批量把一个接口中的属性都变成可选的
+type PartPerson = {
+  [Key in keyof Person]?: Person[Key];
+};
+
+let p1: PartPerson = {};
+```
+
+
+### infer 关键字
+
+在条件类型语句中，可以用 infer 声明一个类型变量并且对它进行使用
+
+```ts
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
+```
+
+以上代码中 infer R 就是声明一个变量来承载传入函数签名的返回值类型，简单说就是用它取到函数返回值的类型方便之后使用。
+
+
+### 内置工具类型
+
+1. Exclude<T,U> 从 T 可分配给的类型中排除 U
+    ```ts
+    type Exclude<T, U> = T extends U ? never : T;
+
+    type E = Exclude<string | number, string>;
+    let e: E = 10;
+    ```
+2. Extract<T,U> 从 T 可分配给的类型中提取 U
+3. NonNullable 从 T 中排除 null 和 undefined
+4. ReturnType infer 最早出现在此 PR 中，表示在 extends 条件语句中待推断的类型变量
+5. Parameters 该工具类型主要是获取函数类型的参数类型
+6. Partial Partial 可以将传入的属性由非可选变为可选
+7. Required Required 可以将传入的属性中的可选项变为必选项，这里用了 -? 修饰符来实现。
+8. Readonly Readonly 通过为传入的属性每一项都加上 readonly 修饰符来实现。
+9. Pick<T,K> Pick 能够帮助我们从传入的属性中摘取某些返回
+10. Record<K,T> 构造一个类型，该类型具有一组属性 K，每个属性的类型为 T。可用于将一个类型的属性映射为另一个类型。Record 后面的泛型就是对象键和值的类型。
+11. Omit<K,T> 基于已经声明的类型进行属性剔除获得新类型
+
+
+
+
+
+
+
 
 
 
