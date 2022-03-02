@@ -19,5 +19,8 @@ module.exports = {
   ...createSideBarsConfig([
     { title: "interview", prefixPath: "/blogs/interview" },
   ]),
+  ...createSideBarsConfig([
+    { title: "门徒", prefixPath: "/blogs/mentu" },
+  ]),
   ...createSideBarsConfig([{ title: "小识书屋", prefixPath: "/blogs/tips" }]),
 };
