@@ -37,17 +37,17 @@ module.exports = {
         link: "/timeline/",
         icon: "reco-date",
       },
-      {
-        text: "Contact",
-        icon: "reco-message",
-        items: [
-          {
-            text: "GitHub",
-            link: "https://github.com/7tingyu",
-            icon: "reco-github",
-          },
-        ],
-      },
+      // {
+      //   text: "Contact",
+      //   icon: "reco-message",
+      //   items: [
+      //     {
+      //       text: "GitHub",
+      //       link: "https://github.com/7tingyu",
+      //       icon: "reco-github",
+      //     },
+      //   ],
+      // },
     ],
     sidebar,
     type: "blog",
