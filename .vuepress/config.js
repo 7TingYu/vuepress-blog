@@ -37,17 +37,17 @@ module.exports = {
         link: "/timeline/",
         icon: "reco-date",
       },
-      // {
-      //   text: "Contact",
-      //   icon: "reco-message",
-      //   items: [
-      //     {
-      //       text: "GitHub",
-      //       link: "https://github.com/7tingyu",
-      //       icon: "reco-github",
-      //     },
-      //   ],
-      // },
+      {
+        text: "Contact",
+        icon: "reco-message",
+        items: [
+          {
+            text: "GitHub",
+            link: "https://github.com/7tingyu",
+            icon: "reco-github",
+          },
+        ],
+      },
     ],
     sidebar,
     type: "blog",
@@ -71,12 +71,12 @@ module.exports = {
       },
     ],
     codeTheme: "solarizedlight",
-    logo: "/images/config/logo.png",
+    logo: "https://vuepress.vuejs.org/icons/apple-touch-icon-152x152.png",
     search: true,
     searchMaxSuggestions: 10,
     lastUpdated: "Last Updated",
     author: "听雨",
-    authorAvatar: "/images/config/avatar.png",
+    authorAvatar: "/images/config/avatar.jpg",
     startYear: "2020",
   },
   markdown: {
