@@ -1,6 +1,6 @@
 ---
-title: Git github
-date: 2021-04-03
+title: Git github ssh
+date: 2022-03-05
 tags:
  - git
 categories:
