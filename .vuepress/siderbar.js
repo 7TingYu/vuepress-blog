@@ -17,10 +17,11 @@ module.exports = {
     { title: "数学 先导课", prefixPath: "/blogs/Math-base" },
   ]),
   ...createSideBarsConfig([
-    { title: "interview", prefixPath: "/blogs/interview" },
+    { title: "政治", prefixPath: "/blogs/political" },
   ]),
   ...createSideBarsConfig([
-    { title: "门徒", prefixPath: "/blogs/mentu" },
+    { title: "interview", prefixPath: "/blogs/interview" },
   ]),
+  ...createSideBarsConfig([{ title: "门徒", prefixPath: "/blogs/mentu" }]),
   ...createSideBarsConfig([{ title: "小识书屋", prefixPath: "/blogs/tips" }]),
 };
