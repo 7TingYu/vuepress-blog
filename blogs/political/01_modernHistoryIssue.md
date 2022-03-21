@@ -1,5 +1,5 @@
 ---
-title: 考研政治 中国近现代史纲要 issue
+title: 考研政治 01 近代中国国情变化 issue
 date: 2022-3-14 
 tags:
  - 政治
