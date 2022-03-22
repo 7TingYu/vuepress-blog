@@ -275,31 +275,6 @@ public:
 ```
 
 
-### leetCode 946 验证栈序列
-
-```cpp
-class Solution {
-public:
-    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
-        int i = 0, j = 0;
-        stack<int> s;
-        while (j < popped.size()) {
-            while (s.empty() || s.top() != popped[j]) {
-                if (i >= pushed.size()) break;
-                s.push(pushed[i]);
-                i++;
-            }
-
-            if (s.top() != popped[j]) return false;
-            s.pop();
-            j++;
-        }
-        return true;
-    }
-};
-```
-
-
 ### leetCode 1246 移除无效的括号
 
 ```cpp
@@ -446,48 +421,6 @@ public:
     }
 };
 ```
-
-
-
-### leetCode 227 基本计算器 II
-
-```cpp
-class Solution {
-public:
-    int calculate(string s) {
-        s += '#';
-        stack<int> sta;
-        int num = 0, lastOp = '+';
-        for (int i = 0; i < s.size(); i++) {
-            if (s[i] == ' ') continue;
-            if (s[i] >= '0' && s[i] <= '9') {
-                num = num * 10 + (s[i] - '0');
-            }
-            else {
-                if (lastOp == '+') sta.push(num);
-                else if (lastOp == '-') sta.push(-num);
-                else if (lastOp == '*') sta.top() *= num;
-                else if (lastOp == '/') sta.top() /= num;
-                num = 0;
-                lastOp = s[i];
-            }
-        }
-
-        // if (lastOp == '+') sta.push(num);
-        // else if (lastOp == '-') sta.push(-num);
-        // else if (lastOp == '*') sta.top() *= num;
-        // else if (lastOp == '/') sta.top() /= num;
-
-        int ans = 0;
-        while (!sta.empty()) {
-            ans += sta.top();
-            sta.pop();
-        }
-        return ans;
-    }
-};
-```
-
 
 
 
