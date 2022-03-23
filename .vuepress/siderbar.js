@@ -6,6 +6,9 @@ module.exports = {
     { title: "vue 进阶学识", prefixPath: "/blogs/vue-advance" },
   ]),
   ...createSideBarsConfig([
+    { title: "react 基础学识", prefixPath: "/blogs/react-base" },
+  ]),
+  ...createSideBarsConfig([
     { title: "c语言 c 基础", prefixPath: "/blogs/c-base" },
     { title: "c语言 数据结构", prefixPath: "/blogs/c-data-structure" },
     { title: "c语言 c++ 基础", prefixPath: "/blogs/c++-base" },
@@ -16,9 +19,7 @@ module.exports = {
   ...createSideBarsConfig([
     { title: "数学 先导课", prefixPath: "/blogs/Math-base" },
   ]),
-  ...createSideBarsConfig([
-    { title: "政治", prefixPath: "/blogs/political" },
-  ]),
+  ...createSideBarsConfig([{ title: "政治", prefixPath: "/blogs/political" }]),
   ...createSideBarsConfig([
     { title: "interview", prefixPath: "/blogs/interview" },
   ]),
