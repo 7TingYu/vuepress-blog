@@ -21,7 +21,7 @@ const listItems = numbers.map((number) =>
 );
 ```
 
-我们把整个 listItems 插入到 \<ul> 元素中，然后渲染进 DOM：
+我们把整个 listItems 插入到 \<ul> 元素中，然后渲染进 DOM： 
 
 ```js
 ReactDOM.render(
