@@ -1,6 +1,6 @@
 ---
 title: react hook - Hook 简介
-date: 2022-3-31
+date: 2022-03-31
 tags:
  - react
 categories:
