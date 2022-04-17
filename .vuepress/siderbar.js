@@ -7,6 +7,7 @@ module.exports = {
   ]),
   ...createSideBarsConfig([
     { title: "react 基础学识", prefixPath: "/blogs/react-base" },
+    { title: "react Hook", prefixPath: "/blogs/react-hook" },
   ]),
   ...createSideBarsConfig([
     { title: "c语言 c 基础", prefixPath: "/blogs/c-base" },
