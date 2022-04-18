@@ -29,6 +29,9 @@ brew install
 
 在 [git官网](https://git-scm.com/) 进行下载
 
+安装包下载地址：https://gitforwindows.org/
+
+官网慢，可以用国内的镜像：https://npm.taobao.org/mirrors/git-for-windows/。
 
 ## 必备知识点
 
