@@ -1,6 +1,6 @@
 ---
 title: 考研数学 微分中值定理和导数的应用
-date: 2022-04-11
+date: 2022-04-19
 tags:
  - 考研数学
 categories:
@@ -78,6 +78,79 @@ categories:
 
 
 ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff5106b6e6ed4733b19b7534494be6e5~tplv-k3u1fbpfcp-watermark.image?)
+
+
+
+
+## 函数单调性的判定
+
+
+### 单调性判断定理（高频且难）【0403】
+
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6ec936ae1d2a4338a37ac0aa845ae96e~tplv-k3u1fbpfcp-watermark.image?)
+
+
+## 函数的极值及其求法
+
+
+### 函数的极值及其求法（高频且难）【0404】
+
+
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/01e287de7555404aa79555158cd3ebf4~tplv-k3u1fbpfcp-watermark.image?)
+
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/42ce1cbe51fb4b97bba400f41838f708~tplv-k3u1fbpfcp-watermark.image?)
+
+
+## 函数的最值及其应用
+
+
+### 函数的最值及其应用（低频且易）【0405】
+
+
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/49e5afa2ee3b48a79549bd021043226d~tplv-k3u1fbpfcp-watermark.image?)
+
+
+
+## 曲线的凹凸性和拐点
+
+
+### 曲线的凹凸性和拐点（高频且难）【0406】
+
+
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/623d6c3e9b1947c5bc5e43bcda460044~tplv-k3u1fbpfcp-watermark.image?)
+
+
+
+
+![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9e58b7a3200c46f0ae8be395c44c7875~tplv-k3u1fbpfcp-watermark.image?)
+
+
+## 曲线的渐近线
+
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/54ed3c6d77e24437811dbbfe1a25f94a~tplv-k3u1fbpfcp-watermark.image?)
+
+
+
+### 水平渐近线（高频且易）【040701】
+
+
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ea26feee4ba947e2a3dd0b87b662a375~tplv-k3u1fbpfcp-watermark.image?)
+
+
+
+### 铅直渐近线（高频考点）【040702】
+
+
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ff358faada0f499b96b347d397658381~tplv-k3u1fbpfcp-watermark.image?)
+
+
+
+
+
+
+
+
+
 
 
 
