@@ -1,4 +1,4 @@
-const { createSideBarConfig, createSideBarsConfig } = require('./util')
+const { createSideBarConfig, createSideBarsConfig } = require("./util");
 
 module.exports = {
   ...createSideBarsConfig([
@@ -26,4 +26,7 @@ module.exports = {
   ]),
   ...createSideBarsConfig([{ title: "门徒", prefixPath: "/blogs/mentu" }]),
   ...createSideBarsConfig([{ title: "小识书屋", prefixPath: "/blogs/tips" }]),
+  ...createSideBarsConfig([
+    { title: "threejs 基础", prefixPath: "/blogs/threejs-base" },
+  ]),
 };
