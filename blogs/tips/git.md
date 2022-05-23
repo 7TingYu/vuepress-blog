@@ -195,7 +195,7 @@ git add .           // 批量跟踪
 git commit              	// 提交文件到本地仓库
 git commit -m 'xxx'     	// xxx是你本次提交的信息说明
 git commit -am 'xxx'    	// 将所有已跟踪的文件暂存起来一并提交
-git commit -amend -m 'xxx'  // -m 失误时，从写备注
+git commit --amend -m 'xxx'  // -m 失误时，从写备注
 ```
 
 
