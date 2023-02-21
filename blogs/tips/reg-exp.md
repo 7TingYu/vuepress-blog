@@ -241,7 +241,7 @@ str.split('').reverse().join('').replace(/elp(?=pa)/, 'ylp').split('').reverse()
 | -------- | ----------- |
 | 与       | 无          |
 | 非       | [^regex]和! |
-| 或       |             |  |
+| 或       | \|          |
 
 
 

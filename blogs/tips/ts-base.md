@@ -1028,9 +1028,9 @@ type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
    ```ts
     type Partial<T> = { [P in keyof T]?: T[P] };
     interface A {
-    a1: string;
-    a2: number;
-    a3: boolean;
+      a1: string;
+      a2: number;
+      a3: boolean;
     }
     type aPartial = Partial<A>;
     const a: aPartial = {}; // 不会报错
@@ -1043,7 +1043,7 @@ type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
         gender?: "male" | "female";
     }
     /**
-    * type Required<T> = { [P in keyof T]-?: T[P] };
+    * type Required<T> = { [P in keyof T]-?: T[P] }; 
     */
     let p: Required<Person> = {
         name: "hello",
