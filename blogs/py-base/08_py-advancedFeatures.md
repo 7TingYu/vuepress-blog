@@ -275,33 +275,46 @@ z = C
 >>> L = ['Hello', 'World', 'IBM', 'Apple']
 >>> [s.lower() for s in L]
 ['hello', 'world', 'ibm', 'apple']
-if ... else
+```
+
+### if ... else
 使用列表生成式的时候，有些童鞋经常搞不清楚if...else的用法。
 
 例如，以下代码正常输出偶数：
 
+```py
 >>> [x for x in range(1, 11) if x % 2 == 0]
 [2, 4, 6, 8, 10]
+```
+
 但是，我们不能在最后的if加上else：
 
+```py
 >>> [x for x in range(1, 11) if x % 2 == 0 else 0]
   File "<stdin>", line 1
     [x for x in range(1, 11) if x % 2 == 0 else 0]
                                               ^
 SyntaxError: invalid syntax
+```
 这是因为跟在for后面的if是一个筛选条件，不能带else，否则如何筛选？
 
 另一些童鞋发现把if写在for前面必须加else，否则报错：
 
+```py
 >>> [x if x % 2 == 0 for x in range(1, 11)]
   File "<stdin>", line 1
     [x if x % 2 == 0 for x in range(1, 11)]
                        ^
 SyntaxError: invalid syntax
+```
+
 这是因为for前面的部分是一个表达式，它必须根据x计算出一个结果。因此，考察表达式：x if x % 2 == 0，它无法根据x计算出结果，因为缺少else，必须加上else：
 
+```py
 >>> [x if x % 2 == 0 else -x for x in range(1, 11)]
 [-1, 2, -3, 4, -5, 6, -7, 8, -9, 10]
+```
+
 上述for前面的表达式x if x % 2 == 0 else -x才能根据x计算出确定的结果。
 
 可见，在一个列表生成式中，for前面的if ... else是表达式，而for后面的if是过滤条件，不能带else。
