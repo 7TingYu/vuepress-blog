@@ -1,5 +1,5 @@
 ---
-title: react 基础 - 列表 & Key
+title: react 基础 - 组合 vs 继承
 date: 2022-3-23
 tags:
  - react
